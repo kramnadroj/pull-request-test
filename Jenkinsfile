@@ -7,6 +7,9 @@ pipeline {
    }
 
    stages {
+      stage('Starting Jenkins Job') {
+         build job: 'tag-test'
+      }
       stage('Build') {
          steps {
             // Get some code from a GitHub repository
