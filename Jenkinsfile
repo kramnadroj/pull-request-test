@@ -8,7 +8,9 @@ pipeline {
 
    stages {
       stage('Starting Jenkins Job') {
-         build job: 'tag-test'
+         steps {
+            build job: 'tag-test'
+         }
       }
       stage('Build') {
          steps {
